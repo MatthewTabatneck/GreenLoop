@@ -6,6 +6,8 @@ export default {
     extend: {
       colors: {
         beige: "#F5f5dc",
+        rgreen: "#00C805",
+        back: "#FFFBF3",
       },
       fontFamily: {
         sans: ["Inter", "sans-serif"], // Replace 'Inter' with your desired font
