@@ -1,6 +1,10 @@
-export function NavBar({ isMenuOpen, toggleMenu }) {
+export function NavBar({ isMenuOpen, toggleMenu, hasScrolled }) {
   return (
-    <header className="bg-beige p-4 z-50 w-full">
+    <header
+      className={`${
+        hasScrolled ? "bg-beige shadow-lg" : "bg-transparent"
+      } p-4 z-50 w-full sticky top-0 transition-colors duration-300`}
+    >
       <div className="max-w-screen-xl mx-auto flex items-center justify-between">
         {/* Logo and Title */}
         <div className="flex items-center">
@@ -18,7 +22,11 @@ export function NavBar({ isMenuOpen, toggleMenu }) {
 
         {/* Navigation Links */}
         <nav className="flex items-center">
-          <ul className={`${isMenuOpen ? "block" : "hidden"} md:flex gap-x-14 items-center`}>
+          <ul
+            className={`${
+              isMenuOpen ? "block" : "hidden"
+            } md:flex gap-x-14 items-center`}
+          >
             <li className="flex items-center">
               <a href="#" className="hover:text-rgreen">
                 Impact Tracker
