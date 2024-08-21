@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { NavBar } from "./NavBar";
+import { FrontBody } from "./Front-Body";
 import "./App.css";
 
 export default function App() {
@@ -30,7 +31,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-back">
       <NavBar isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} hasScrolled={hasScrolled} />
-      
+      <FrontBody/>
       
       <div>
         <main className="p-8">
